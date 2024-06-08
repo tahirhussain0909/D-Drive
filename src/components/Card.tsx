@@ -1,11 +1,17 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
+import React from "react";
 // import React from "react";
 import { FaRegFileAlt } from "react-icons/fa";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { MdDownloadForOffline } from "react-icons/md";
 
-function Card({ data, reference }) {
+interface CardProps {
+  data: any;
+  reference: React.RefObject<HTMLDivElement>;
+}
+
+function Card({ data, reference }: CardProps) {
   return (
     <motion.div
       drag
